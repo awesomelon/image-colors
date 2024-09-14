@@ -1,6 +1,6 @@
 {
   "name": "@j-ho/image-colors",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A library to extract dominant colors from images.",
   "type": "module",
   "main": "./dist/index.js",
