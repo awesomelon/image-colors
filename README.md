@@ -1,6 +1,6 @@
-# ColorExtractor
+# Image-Colors
 
-ColorExtractor is a powerful and flexible library for extracting dominant colors from images. It uses k-means clustering to identify and analyze the main colors in an image.
+Image-Colors is a powerful and flexible library for extracting dominant colors from images. It uses k-means clustering to identify and analyze the main colors in an image.
 
 ## Key Features
 
@@ -12,10 +12,10 @@ ColorExtractor is a powerful and flexible library for extracting dominant colors
 
 ## Installation
 
-You can install ColorExtractor using npm:
+You can install Image-Colors using npm:
 
 ```bash
-npm install @j-ho/color-extractor
+npm install @j-ho/image-colors
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ npm install @j-ho/color-extractor
 ### Browser Environment
 
 ```typescript
-import { createColorExtractor } from '@j-ho/color-extractor/browser';
+import { createColorExtractor } from '@j-ho/image-colors/browser';
 
 (async () => {
   const colorExtractor = await createColorExtractor();
@@ -47,7 +47,7 @@ import { createColorExtractor } from '@j-ho/color-extractor/browser';
 ### Node.js Environment
 
 ```typescript
-import { createColorExtractor } from '@j-ho/color-extractor/node';
+import { createColorExtractor } from '@j-ho/image-colors/node';
 
 (async () => {
   const colorExtractor = await createColorExtractor();

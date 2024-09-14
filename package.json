@@ -1,5 +1,5 @@
 {
-  "name": "@j-ho/color-extractor",
+  "name": "@j-ho/image-colors",
   "version": "0.0.1",
   "description": "A library to extract dominant colors from images.",
   "type": "module",
@@ -37,16 +37,12 @@
     "publish:minor": "npm version minor && npm publish",
     "publish:major": "npm version major && npm publish"
   },
-  "repository": "https://github.com/awesomelon/color-extractors",
+  "repository": "https://github.com/awesomelon/image-colors",
   "keywords": [
     "color",
     "extractor",
     "image",
-    "kmeans",
-    "dominant colors",
-    "typescript",
-    "nodejs",
-    "browser"
+    "palette"
   ],
   "dependencies": {
     "chroma-js": "^3.1.1",
