@@ -1,0 +1,68 @@
+{
+  "name": "@j-ho/color-extractors",
+  "version": "0.0.1",
+  "description": "A library to extract dominant colors from images.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./browser": {
+      "import": "./dist/browser.mjs",
+      "require": "./dist/browser.js",
+      "types": "./dist/browser.d.ts"
+    },
+    "./node": {
+      "import": "./dist/node.mjs",
+      "require": "./dist/node.js",
+      "types": "./dist/node.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "j-ho",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest",
+    "prepublishOnly": "npm run build",
+    "publish:patch": "npm version patch && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:major": "npm version major && npm publish"
+  },
+  "repository": "https://github.com/awesomelon/color-extraction",
+  "keywords": [
+    "color",
+    "extractor",
+    "image",
+    "kmeans",
+    "dominant colors",
+    "typescript",
+    "nodejs",
+    "browser"
+  ],
+  "dependencies": {
+    "chroma-js": "^3.1.1",
+    "ml-kmeans": "^6.0.0",
+    "node-cache": "^5.1.2",
+    "pureimage": "^0.4.13",
+    "sharp": "^0.33.4",
+    "tempfile": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/chroma-js": "^2.4.4",
+    "@types/node": "^22.5.4",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vitest": "^2.1.0"
+  }
+}
