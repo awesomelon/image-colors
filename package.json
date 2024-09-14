@@ -37,7 +37,7 @@
     "publish:minor": "npm version minor && npm publish",
     "publish:major": "npm version major && npm publish"
   },
-  "repository": "https://github.com/awesomelon/color-extraction",
+  "repository": "https://github.com/awesomelon/color-extractors",
   "keywords": [
     "color",
     "extractor",
