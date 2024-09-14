@@ -27,10 +27,9 @@ import { createColorExtractor } from '@j-ho/image-colors/browser';
 
 (async () => {
   const colorExtractor = await createColorExtractor();
-
-  // Extract colors from an image element
+  
   const img = document.getElementById('myImage');
-  const result = await colorExtractor.extractColors({
+  const { colors, dominantColor } = await colorExtractor.extractColors({
     imageSource: img,
     k: 5,
     sampleRate: 0.1,
@@ -38,8 +37,8 @@ import { createColorExtractor } from '@j-ho/image-colors/browser';
     useHex: true
   });
 
-  console.log('Dominant Color:', result.dominantColor);
-  console.log('Other Colors:', result.colors);    
+  console.log('Dominant Color:', dominantColor);
+  console.log('Other Colors:', colors);    
 })();
 
 ```
@@ -49,21 +48,19 @@ import { createColorExtractor } from '@j-ho/image-colors/browser';
 ```typescript
 import { createColorExtractor } from '@j-ho/image-colors/node';
 
-(async () => {
-  const colorExtractor = await createColorExtractor();
+async function handleUploads(req, res) {
+    const colorExtractor = await createColorExtractor();
+    
+    const result = await colorExtractor.extractColors({
+        imageSource: req.file.path,
+        k: 5,
+        sampleRate: 0.1,
+        onFilterSimilarColors: true,
+        useHex: true
+    });
 
-  // Extract colors from an image element
-  const img = document.getElementById('myImage');
-  const result = await colorExtractor.extractColors({
-    imageSource: img,
-    k: 5,
-    sampleRate: 0.1,
-    onFilterSimilarColors: true,
-    useHex: true
-  });
-
-  console.log('Dominant Color:', result.dominantColor);
-  console.log('Other Colors:', result.colors);    
+    res.json({ colors, dominantColor });
+}
 ```
 
 ## API
