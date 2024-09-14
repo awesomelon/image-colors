@@ -1,4 +1,4 @@
-declare module "@j-ho/color-extractors" {
+declare module "@j-ho/color-extractor" {
   export interface ExtractColorsOptions {
     imageSource: string | HTMLImageElement;
     k?: number;

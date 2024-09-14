@@ -1,6 +1,8 @@
 name: Test and Auto-merge
 
 on:
+  merge_request:
+    branches: [ main ]  # main 브랜치로의 MR에 대해 실행
   pull_request:
     branches: [ main ]  # main 브랜치로의 PR에 대해 실행
 

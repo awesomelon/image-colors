@@ -15,7 +15,7 @@ ColorExtractor is a powerful and flexible library for extracting dominant colors
 You can install ColorExtractor using npm:
 
 ```bash
-npm install @j-ho/color-extractors
+npm install @j-ho/color-extractor
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ npm install @j-ho/color-extractors
 ### Browser Environment
 
 ```typescript
-import { createColorExtractor } from '@j-ho/color-extractors/browser';
+import { createColorExtractor } from '@j-ho/color-extractor/browser';
 
 (async () => {
   const colorExtractor = await createColorExtractor();
@@ -47,7 +47,7 @@ import { createColorExtractor } from '@j-ho/color-extractors/browser';
 ### Node.js Environment
 
 ```typescript
-import { createColorExtractor } from '@j-ho/color-extractors/node';
+import { createColorExtractor } from '@j-ho/color-extractor/node';
 
 (async () => {
   const colorExtractor = await createColorExtractor();
